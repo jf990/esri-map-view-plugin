@@ -3,7 +3,7 @@
  * Plugin Name: esri-map-view
  * Plugin URI:        https://github.com/jf990/esri-map-component/
  * Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Requires at least: 5.2
  * Requires PHP:      7.0
  * Author:            John Foster
@@ -49,13 +49,7 @@ function esrimapview_shortcodes_init()
 {
     add_shortcode('esri-map-view', 'esrimapview_shortcode');
     add_shortcode('esri-scene-view', 'esrisceneview_shortcode');
-
-    function esrimapview_hook_javascript() {
-        ?>
-        <script src='https://unpkg.com/esri-map-view@0.3.1/dist/esri-map-view.js'></script>
-        <?php
-    }
-    add_action('wp_head', 'esrimapview_hook_javascript');
+    wp_enqueue_script('esri-map-view', 'https://unpkg.com/esri-map-view@0.3.1/dist/esri-map-view.js', [], '0.3.1', false);
 }
  
 add_action('init', 'esrimapview_shortcodes_init');

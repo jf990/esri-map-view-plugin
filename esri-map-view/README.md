@@ -4,7 +4,7 @@ Plugin Name: esri-map-view
 Plugin URI:        https://github.com/jf990/esri-map-component/
 Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
 Tags:              maps, arcgis, location, scene, globe, points, layers, markers, google maps
-Version:           1.0.1
+Version:           1.0.2
 Requires at least: 5.2
 Requires PHP:      7.0
 Author:            John Foster
@@ -13,7 +13,7 @@ License:           MIT
 License URI:       https://github.com/jf990/esri-map-component/blob/master/LICENSE
 Text Domain:       esri-map-view
 
-Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
+Render an Esri ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
 
 ## Description
 
@@ -23,6 +23,7 @@ You can also add a search widget to the map.
 
 ## Features
 
+* Use Esri world-renowned authoritative map services in your WordPress blog.
 * Select from any Esri basemap.
 * Set an initial viewpoint and zoom level.
 * Add a marker and pop-up to the initial viewpoint.
@@ -30,6 +31,8 @@ You can also add a search widget to the map.
 * Display map on posts/pages using the WordPress shortcode syntax.
 * Set your map height and width.
 * Set Map zoom level.
+
+This plugin uses a 3rd party service provided by [Esri](https://esri.com). Esri takes the responsibility to protect your privacy seriously. Esri holds itself to the highest national and international standards, including [Privacy Shield certification](https://www.privacyshield.gov/participant?id=a2zt00000004EspAAE) and GDPR compliance. View our [privacy policy](https://www.esri.com/en-us/privacy/overview)
 
 ## Installation
 
@@ -55,7 +58,7 @@ You can also add a search widget to the map.
 * `webmap`: select an ArcGIS web map item ID. If this is provided the `basemaps` attribute is ignored.
 * `viewpoint`: Indicate an initial viewpoint to focus the map. This is a string of 3 comma-separated numbers expected: latitude (y), longitude (x), and levelOfDetail (LOD). Example: "22.7783,34.1234,9". You should set this if you set a `basemap`. You do not need to set this if you set `webmap` as the web map's initial viewpoint would be used. If you do set `viewpoint` and `webmap` then this setting will override the initial viewpoint of the web map.
 * `layers`: Select layers to add on top of the map using either full URL to the feature service on an ArcGIS server (must be public) or the ArcGIS Online item ID of a public layer. Multiple layers are separated with comma `,`.
-* `symbol`: Indicate a symbol to use to mark the location of the initial viewpoint. This is the fully qualified URL to a 64x64 px PNG image. CORS is respected when accessing the image. You can also specify `green-pin` to use a green map pin as the symbol. You can also specify `pin:{color}` to use a text symbol marker and the color value. Use a 6-digit HTML color value or the standard HTML color name.
+* `symbol`: Indicate a symbol to use to mark the location of the initial viewpoint. This is the fully qualified URL to a 64x64 px PNG image. CORS is respected when accessing the image. You can also specify `green-pin` to use a green map pin as the symbol.
 * `popupinfo`: If `symbol` is set, tapping the image will show a pop-up. This is the `content` for that pop-up.
 * `popuptitle`: If `symbol` is set, tapping the image will show a pop-up. This is the `title` for that pop-up.
 * `search`: Include a search widget by indicating where on the map view it should appear. The valid values for this attribute are `top-left`, `top-right`, `bottom-left`, `bottom-right`. If this attribute is empty/missing or an invalid value then a search widget will not show.
@@ -74,7 +77,7 @@ You can also add a search widget to the map.
 * `cameraposition`: Indicate the camera position for the initial scene viewpoint. This is a string of five comma separated numbers as follows: x,y,z,heading,tilt. If you set this it will override `viewpoint` settings.
 * `viewpoint`: Indicate an initial viewpoint to focus the map. This is a string of 3 comma-separated numbers expected: latitude (y), longitude (x), and levelOfDetail (LOD). Example: "22.7783,34.1234,9". You should set this if you set a `basemap`. You do not need to set this if you set `webscene` as the web scene's initial viewpoint is used. However, this setting will override the web scenes initial viewpoint. The `viewpoint` is not used if `cameraPosition` is also set. For 3D scenes, the level of detail is translated into a 3D camera position height of Z-axis position.
 * `layers`: Select layers to add on top of the map using either full URL to the feature service on an ArcGIS server (must be public) or the ArcGIS Online item ID of a public layer. Multiple layers are separated with comma `,`.
-* `symbol`: Indicate a symbol to use to mark the location of the initial viewpoint. This is the fully qualified URL to a 64x64 px PNG image. CORS is respected when accessing the image. You can also specify `green-pin` to use a green map pin as the symbol. You can also specify `pin:{color}` to use a text symbol marker and the color value. Use a 6-digit HTML color value or the standard HTML color name.
+* `symbol`: Indicate a symbol to use to mark the location of the initial viewpoint. This is the fully qualified URL to a 64x64 px PNG image. CORS is respected when accessing the image. You can also specify `green-pin` to use a green map pin as the symbol.
 * `popupinfo`: If `symbol` is set, tapping the image will show a pop-up. This is the `content` for that pop-up.
 * `popuptitle`: If `symbol` is set, tapping the image will show a pop-up. This is the `title` for that pop-up.
 * `search`: Include a search widget by indicating where on the map view it should appear. The valid values for this attribute are `top-left`, `top-right`, `bottom-left`, `bottom-right`. If this attribute is empty/missing or an invalid value then a search widget will not show.
@@ -82,6 +85,6 @@ You can also add a search widget to the map.
 
 ## Changelog
 
-### 1.0.1 - 31-Dec-2019
+### 1.0.2 - 07-Jan-2020
 
 * Initial release.
