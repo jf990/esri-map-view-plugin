@@ -4,7 +4,7 @@ Esri Map View: Render an Esri ArcGIS map on a WordPress page. Use any Esri basem
 
 ## Version 1.2.1 - 20-Sep-2024
 
-* Upgrade component esri-map-view@0.8.1
+* Upgrade component esri-map-view@0.9.1
 * Upgrade dependencies, ArcGIS Maps SDK for JavaScript version 4.30.
 * Adds ArcGIS API key support.
 * Update README.

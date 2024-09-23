@@ -8,7 +8,7 @@ Tags:              maps, arcgis, esri, location, globe
 Version:           1.2.1
 Stable tag:        1.2.1
 Requires at least: 5.2
-Tested up to:      6.6.2
+Tested up to:      6.6
 Requires PHP:      7.0
 Author:            John Foster
 Author URI:        https://github.com/jf990/
@@ -97,3 +97,18 @@ This plugin uses a 3rd party service provided by [Esri](https://esri.com). No pe
 ## Changelog
 
 See [Change log](./CHANGELOG.md).
+
+## Frequently Asked Questions
+
+= How do I get an API key? =
+
+If you do not have an ArcGIS account, sign up for free at [ArcGIS Location Platform](https://location.arcgis.com) and then follow the instructions to [create an API key](https://developers.arcgis.com/documentation/security-and-authentication/api-key-authentication/).
+
+## Upgrade Notice
+
+Support for API keys was added in 1.2.1. If upgrading from a version before 1.2.1, you must set an API key.
+
+## Screenshots
+
+1. Esri map view screenshot
+2. Esri scene view screenshot

@@ -57,7 +57,7 @@ function esrimapview_shortcodes_init()
 {
     add_shortcode('esri-map-view', 'esrimapview_shortcode');
     add_shortcode('esri-scene-view', 'esrisceneview_shortcode');
-    wp_enqueue_script_module('esri-map-view', 'https://unpkg.com/esri-map-view@0.8.1/dist/esri-map-view/esri-map-view.esm.js', [], '0.8.1', false);
+    wp_enqueue_script_module('esri-map-view', 'https://unpkg.com/esri-map-view@0.9.1/dist/esri-map-view/esri-map-view.esm.js', [], '0.9.1', false);
 }
  
 add_action('init', 'esrimapview_shortcodes_init');
