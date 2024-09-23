@@ -8,6 +8,8 @@
 *.vi
 *~
 *.sass-cache
+*.zip
+*.tar
 
 # OS or Editor folders
 .DS_Store
