@@ -5,8 +5,8 @@ Contributors:      geoplay9
 Plugin URI:        https://github.com/jf990/esri-map-view-plugin/
 Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
 Tags:              maps, arcgis, esri, location, globe
-Version:           1.2.1
-Stable tag:        1.2.1
+Version:           1.2.2
+Stable tag:        1.2.2
 Requires at least: 5.2
 Tested up to:      6.6
 Requires PHP:      7.0
@@ -53,9 +53,7 @@ This plugin uses a 3rd party service provided by [Esri](https://esri.com). No pe
 
 ### Map
 
-```txt
-[esri-map-view height="900px" basemap="arcgis/imagery" viewpoint="13.3761697,52.5166449,15" layers="d3e5c29f5e404aa4b2de29a9f0e37996" search="top-right" symbol="pin:red" symboloffset="0,0" popuptitle="Brandenburg Gate" popupinfo="This is a historic place you should visit" apikey="YOUR_API_KEY"][/esri-map-view]
-```
+`[esri-map-view height="900px" basemap="arcgis/imagery" viewpoint="13.3761697,52.5166449,15" layers="d3e5c29f5e404aa4b2de29a9f0e37996" search="top-right" symbol="pin:red" symboloffset="0,0" popuptitle="Brandenburg Gate" popupinfo="This is a historic place you should visit" apikey="YOUR_API_KEY"][/esri-map-view]`
 
 * `esri-map-view` opening shortcode tag for a 2D map.
 * `height`: indicate the height you want for your map. You must provide a height. The width will automatically scale to the full page width of your page or post.
@@ -72,9 +70,7 @@ This plugin uses a 3rd party service provided by [Esri](https://esri.com). No pe
 
 ### Scene
 
-```txt
-[esri-scene-view height="900px" basemap="arcgis/imagery" viewpoint="13.3761697,52.5166449,15" layers="d3e5c29f5e404aa4b2de29a9f0e37996" search="top-right" symbol="pin:red" symboloffset="0,0" popuptitle="Brandenburg Gate" popupinfo="This is a historic place you should visit" apikey="YOUR_API_KEY"][/esri-scene-view]
-```
+`[esri-scene-view height="900px" basemap="arcgis/imagery" viewpoint="13.3761697,52.5166449,15" layers="d3e5c29f5e404aa4b2de29a9f0e37996" search="top-right" symbol="pin:red" symboloffset="0,0" popuptitle="Brandenburg Gate" popupinfo="This is a historic place you should visit" apikey="YOUR_API_KEY"][/esri-scene-view]`
 
 * `esri-scene-view` opening shortcode tag for a 3D globe.
 * `height`: indicate the height you want for your map. You must provide a height. The width will automatically scale to the full page width of your page or post.
@@ -96,7 +92,21 @@ This plugin uses a 3rd party service provided by [Esri](https://esri.com). No pe
 
 ## Changelog
 
-See [Change log](./CHANGELOG.md).
+= Version 1.2.2 - 25-Sep-2024 =
+
+* Corrected some issues with the documentation.
+* Update README.
+
+= Version 1.2.1 - 20-Sep-2024 =
+
+* Upgrade component esri-map-view@0.9.1
+* Upgrade dependencies, ArcGIS Maps SDK for JavaScript version 4.30.
+* Adds ArcGIS API key support.
+* Update README.
+
+= Version 1.0.2 - 07-Jan-2020 =
+
+* Initial release.
 
 ## Frequently Asked Questions
 
