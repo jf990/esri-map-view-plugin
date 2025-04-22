@@ -3,10 +3,10 @@
  * Plugin Name:       esri-map-view
  * Plugin URI:        https://github.com/jf990/esri-map-view-plugin/
  * Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
- * Version:           1.2.2
- * Stable tag:        1.2.2
+ * Version:           1.2.3
+ * Stable tag:        1.2.3
  * Requires at least: 5.2
- * Tested up to:      6.6
+ * Tested up to:      6.8
  * Requires PHP:      7.0
  * Author:            John Foster
  * Author URI:        https://github.com/jf990/
@@ -23,7 +23,7 @@ if ( ! defined('WPINC') || ! defined( 'ABSPATH' )) {
     exit;
 }
 
-define( 'ESRI_MAP_VIEW_VERSION', '1.2.2' );
+define( 'ESRI_MAP_VIEW_VERSION', '1.2.3' );
 
 function esrimapview_shortcode($attributes = [], $content = null, $tag = '')
 {
@@ -57,7 +57,7 @@ function esrimapview_shortcodes_init()
 {
     add_shortcode('esri-map-view', 'esrimapview_shortcode');
     add_shortcode('esri-scene-view', 'esrisceneview_shortcode');
-    wp_enqueue_script_module('esri-map-view', 'https://unpkg.com/esri-map-view@0.9.1/dist/esri-map-view/esri-map-view.esm.js', [], '0.9.1', false);
+    wp_enqueue_script_module('esri-map-view', 'https://unpkg.com/esri-map-view@0.9.2/dist/esri-map-view/esri-map-view.esm.js', [], '0.9.2', false);
 }
  
 add_action('init', 'esrimapview_shortcodes_init');
