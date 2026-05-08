@@ -2,6 +2,12 @@
 
 Esri Map View: Render an Esri ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
 
+## Version 1.2.4 - 08-May-2026
+
+* Update plug-in to v1.2.4 for WP 6.9
+* Upgrade component esri-map-view@0.9.4
+* Update README.
+
 ## Version 1.2.3 - 09-Apr-2025
 
 * Update plug-in to v1.2.3 for WP 6.8
