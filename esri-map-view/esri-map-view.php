@@ -34,9 +34,10 @@ function esrimapview_shortcode($attributes = [], $content = null, $tag = '')
     $height = isset($attributes['height']) ? sanitize_text_field($attributes['height']) : '480px';
     $html = '<figure class="wp-block-image size-large" style="height:' . $height . ';"><esri-map-view style="height:' . $height . ';"';
  
-    // Add attributes
+    // Copy and sanitize shortcode attributes to HTML tag attributes
     foreach ($attributes as $attribute => $value) {
-        $html .= ' ' . strtolower($attribute) . '="' . esc_attr(sanitize_text_field($value)) . '"';
+        $value = sanitize_text_field($value);
+        $html .= ' ' . strtolower($attribute) . '="' . esc_attr($value) . '"';
     }
     $html .= '>' . esc_html($content) . '</esri-map-view></figure>';
     return $html;
@@ -48,7 +49,7 @@ function esrisceneview_shortcode($attributes = [], $content = null, $tag = '')
     $height = isset($attributes['height']) ? sanitize_text_field($attributes['height']) : '480px';
     $html = '<figure class="wp-block-image size-large" style="height:' . $height . ';"><esri-scene-view style="height:' . $height . ';"';
  
-    // Add attributes
+    // Copy and sanitize shortcode attributes to HTML tag attributes
     foreach ($attributes as $attribute => $value) {
         $value = sanitize_text_field($value);
         $html .= ' ' . strtolower($attribute) . '="' . esc_attr($value) . '"';
