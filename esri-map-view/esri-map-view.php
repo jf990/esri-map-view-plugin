@@ -3,8 +3,8 @@
  * Plugin Name:       esri-map-view
  * Plugin URI:        https://github.com/jf990/esri-map-view-plugin/
  * Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
- * Version:           1.2.4
- * Stable tag:        1.2.4
+ * Version:           1.2.5
+ * Stable tag:        1.2.5
  * Requires at least: 5.2
  * Tested up to:      6.9
  * Requires PHP:      7.0
@@ -26,7 +26,7 @@ if (! defined('WPINC')) {
     exit;
 }
 
-define( 'ESRI_MAP_VIEW_VERSION', '1.2.4' );
+define( 'ESRI_MAP_VIEW_VERSION', '1.2.5' );
 
 function esrimapview_shortcode($attributes = [], $content = null, $tag = '')
 {
@@ -50,7 +50,8 @@ function esrisceneview_shortcode($attributes = [], $content = null, $tag = '')
  
     // Add attributes
     foreach ($attributes as $attribute => $value) {
-        $html .= ' ' . strtolower($attribute) . '="' . esc_attr(sanitize_text_field($value)) . '"';
+        $value = sanitize_text_field($value);
+        $html .= ' ' . strtolower($attribute) . '="' . esc_attr($value) . '"';
     }
     $html .= '>' . esc_html($content) . '</esri-scene-view></figure>';
     return $html;
