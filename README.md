@@ -5,8 +5,8 @@ Contributors:      geoplay9
 Plugin URI:        https://github.com/jf990/esri-map-view-plugin
 Description:       Render an ArcGIS map on a WordPress page. Use any Esri basemap, public layers, public web map or web scene.
 Tags:              maps, arcgis, esri, location, scene, globe, points, layers, markers, google maps
-Version:           1.2.4
-Stable tag:        1.2.4
+Version:           1.2.5
+Stable tag:        1.2.5
 Requires at least: 5.2
 Tested up to:      6.9
 Requires PHP:      7.0
